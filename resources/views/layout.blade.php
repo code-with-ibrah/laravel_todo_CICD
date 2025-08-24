@@ -10,7 +10,7 @@
 
 <!-- Navbar -->
 <nav class="bg-blue-600 p-4 text-white flex justify-between g-2">
-    <a href="{{ route("todos") }}"><h1 class="text-xl font-bold">My App</h1></a>
+    <a href="{{ route("todos") }}"><h1 class="text-xl font-bold">Wapiwag Todo</h1></a>
 
     <div class="nav-links">
         <a href="{{ route("todos") }}">Todo List</a>
