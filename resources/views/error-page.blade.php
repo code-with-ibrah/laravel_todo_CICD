@@ -12,16 +12,13 @@
         <!-- To-Do List Table -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
             <div class="p-6 sm:p-8">
-                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Your Tasks</h2>
-            </div>
-            <div class="overflow-x-auto">
-
-                @if($msg)
-                    <div>{{ $msg }} </div>
-                @else
-                    <div> Something went wrong</div>
-                @endif
-                
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">
+                    @if($msg)
+                        <div>{{ $msg }} </div>
+                    @else
+                        <div> Something went wrong</div>
+                    @endif
+                </h2>
             </div>
         </div>
 
