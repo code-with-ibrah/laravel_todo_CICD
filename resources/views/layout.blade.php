@@ -15,6 +15,7 @@
     <div class="nav-links">
         <a href="{{ route("todos") }}">Todo List</a>
         <a href="{{ route("create_todos") }}">Add Todo</a>
+        <a href="{{ route("error_page") }}">Test error page</a>
     </div>
 </nav>
 
