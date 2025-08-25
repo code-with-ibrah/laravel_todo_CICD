@@ -89,6 +89,8 @@ class TodosController extends Controller
 
     public function error()
     {
-        return view("error-page");
+        return view("error-page", [
+            "msg" => null
+        ]);
     }
 }
