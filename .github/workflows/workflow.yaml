@@ -24,10 +24,10 @@ jobs:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: node619.namehero.net
-          username: yelloev1@node619
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          port: 37980
+          port: ${{ secrets.SSH_PORT }}
           script: |
             cd ~/repositories
             git fetch --all
