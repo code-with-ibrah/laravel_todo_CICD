@@ -35,22 +35,28 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody id="todo-list" class="bg-white divide-y divide-gray-200">
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${todo.title}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${todo.description}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${todo.category}</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusColorClass}">
-                                completed
-                            </span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                <!-- Edit and Delete buttons -->
-                                <button class="text-blue-600 hover:text-blue-900 mr-2">Edit</button>
-                                <button class="delete-btn text-red-600 hover:text-red-900" data-index="${index}">Delete</button>
-                            </td>
-                        </tr>
+                    <tbody id="$todo.list" class="bg-white divide-y divide-gray-200">
+                        @if(count($todos))
+                            @foreach ($todos as $todo)
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{$todo->title}}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{$todo->description}}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{$todo->category}}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusColorClass}">
+                                        {{ $todo->status }}
+                                    </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <!-- Edit and Delete buttons -->
+                                        <button class="text-blue-600 hover:text-blue-900 mr-2">Edit</button>
+                                        <button class="delete-btn text-red-600 hover:text-red-900" data-index="${index}">Delete</button>
+                                    </td>
+                            </tr>
+                            @endforeach
+                        @else
+                            <h2>No Todo Records</h2>
+                        @endif
                     </tbody>
                 </table>
             </div>

@@ -4,7 +4,7 @@
 
 <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8 transition-all duration-300 hover:shadow-xl">
     <h2 class="text-2xl font-semibold text-gray-700 mb-6">Add a New Task</h2>
-    <form id="todo-form" class="space-y-4 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <form id="todo-form" action="{{ route("store_todo_post") }}" method="POST" class="space-y-4 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         @csrf
         <div class="col-span-1">
             <label for="todo-title" class="block text-sm font-medium text-gray-700">Title</label>
