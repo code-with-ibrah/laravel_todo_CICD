@@ -30,4 +30,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             clear
+            cd repositories
+            cd inventory_system
             ls
