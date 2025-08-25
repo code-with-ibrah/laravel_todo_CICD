@@ -62,7 +62,7 @@
                                             <button type="submit" class="text-blue-600 hover:text-blue-900 mr-2">Edit</button>
                                         </form>
 
-                                        <form action="{{ route('edit_todo', $todo->id) }}">
+                                        <form onsubmit="return confirm('Are you sure ?')" action="{{ route('delete_todo_delete', $todo->id) }}">
                                             @csrf                                       
                                             <button type="submit" class="delete-btn text-red-600 hover:text-red-900">Delete</button>
                                         </form>

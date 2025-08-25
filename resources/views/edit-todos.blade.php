@@ -28,9 +28,9 @@
 
 
                 @if($todo->status == "To-Do")
-                <option value="In Progress">In Progress</option>
-                <option value="Completed">Completed</option>
-                <option value="To-Do">To-Do</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                    <option value="To-Do">To-Do</option>
                 @elseif($todo->status == "In Progress")
                     <option value="To-Do">To-Do</option>
                     <option value="Completed">Completed</option>
