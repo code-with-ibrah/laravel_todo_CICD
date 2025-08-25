@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\TodoRequest;
 use App\Models\Todo;
-use Exception;
-use Illuminate\Http\Request;
+use Exception; 
+
 
 class TodosController extends Controller
 {

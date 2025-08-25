@@ -12,6 +12,8 @@ Route::get("/create", [TodosController::class, "create"])->name("create_todos");
 
 Route::post("/create", [TodosController::class, "store"])->name("store_todo_post");
 
-Route::put("/update", [TodosController::class, "update"])->name("upate_todo_put");
+Route::put("/update/{id}", [TodosController::class, "update"])->name("upate_todo_put");
+
+Route::put("/delete", [TodosController::class, "destroy"])->name("delete_todo_delete");
 
 Route::get("/er", [TodosController::class, "error"])->name("error_page");
